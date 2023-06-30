@@ -1,0 +1,32 @@
+package homework1;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class Parrot extends Animal {
+    public Parrot(String name, int age, String color, double weight) {
+        super(name, age, color, weight);
+    }
+
+    @Override
+    public void voice() {
+        System.out.println("where is my sausage?");
+    }
+
+    @Override
+    public void eat(List<Food> foods) {
+        int size = Math.min(1, foods.size());
+        foods.subList(0, size).clear();
+        System.out.println("the parrot ate " + size + " foods");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("the parrot moved wings");
+    }
+
+    @Override
+    public void palm() {
+        System.out.println("the parrot pooped");
+    }
+}
